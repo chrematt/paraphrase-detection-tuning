@@ -10,12 +10,15 @@ from pytorch_lightning.loggers import WandbLogger
 from GLUEDataModule import GLUEDataModule
 from GLUETransformer import GLUETransformer
 
+# Load environment variables
 load_dotenv()
 
+# Environment variables for Weights and Biases
 WANDB_PROJECT_NAME = os.getenv("WANDB_PROJECT_NAME")
 WANDB_ENTITY = os.getenv("WANDB_ENTITY")
 WANDB_API_KEY = os.getenv("WANDB_API_KEY")
 
+# Seed for reproducibility
 seed_everything(42)
 
 
